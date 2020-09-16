@@ -1,0 +1,38 @@
+[
+    {
+        "email": "johndoe@example.com",
+        "password": "johndoe"
+    },
+    {
+        "email": "gddaboss@gmail.com",
+        "password": "gddaboss"
+    },
+    {
+        "email": "cheesefingers23@orkut.com",
+        "password": "cheesefingers"
+    },
+    {
+        "email": "sportanalyst@yahoo.com",
+        "password": "sportanalyst"
+    },
+    {
+        "email": "callmeleo@orkut.com",
+        "password": "callmeleo"
+    },
+    {
+        "email": "fantasysocc@gmail.com",
+        "password": "fantasysocc"
+    },
+    {
+        "email": "sahilbhola@team.telstra.com",
+        "password": "sahilbhola"
+    },
+    {
+        "email": "gauravdeore@team.telstra.com",
+        "password": "gauravdeore"
+    },
+    {
+        "email": "rahulanand@team.telstra.com",
+        "password": "rahulanand"
+    }
+]

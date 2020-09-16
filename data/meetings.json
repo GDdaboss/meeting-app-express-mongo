@@ -1,0 +1,45 @@
+[
+    {
+        "name": "training-class",
+        "date": {
+            "$date": "2020-09-10T00:00:00.000Z"
+        },
+        "startTime": { "hours": 9, "minutes": 30},
+        "endTime": { "hours": 12, "minutes": 30},
+        "description": "This is a meeting for training students in MERN stack",
+        "attendees": [
+            "johndoe@example.com",
+            "gddaboss@gmail.com",
+            "cheesefingers23@orkut.com"
+        ]
+    },
+    {
+        "name": "sports-discussion",
+        "date": {
+            "$date": "2020-09-11T00:00:00.000Z"
+        },
+        "startTime": { "hours": 17, "minutes": 30},
+        "endTime": { "hours": 20, "minutes": 30},
+        "description": "We will discuss the upcoming Premier League matches",
+        "attendees": [
+            "sportanalyst@yahoo.com",
+            "gddaboss@gmail.com",
+            "callmeleo@orkut.com",
+            "fantasysocc@gmail.com"
+        ]
+    },
+    {
+        "name": "HR induction",
+        "date": {
+            "$date": "2020-09-09T00:00:00.000Z"
+        },
+        "startTime": { "hours": 8, "minutes": 0},
+        "endTime": { "hours": 9, "minutes": 30},
+        "description": "Induction of the new employees",
+        "attendees": [
+            "sahilbhola@team.telstra.com",
+            "gauravdeore@team.telstra.com",
+            "rahulanand@team.telstra.com"
+        ]
+    }
+]
