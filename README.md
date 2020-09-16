@@ -1,0 +1,1 @@
+This is the backend code of the meetings application to be built as a case study
