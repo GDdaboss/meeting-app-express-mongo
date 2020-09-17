@@ -13,9 +13,9 @@ const app = express();
 
 app.use( '/', ( req, res, next ) => {
     console.log( 'Received req at', (new Date()).toTimeString() );
-    
-    next();
 
+    next();
+    
     console.log( 'Response sent at', (new Date()).toTimeString() );
 });
 

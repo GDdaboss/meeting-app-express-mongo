@@ -1,4 +1,3 @@
-
 const express = require( 'express' );
 
 const mongoose = require( 'mongoose' );
@@ -9,14 +8,16 @@ const router = express.Router();
 
 router.get('/', authenticate )
 router.get( '/', ( req, res, next ) => {
+    // console.log("im here2")
+
     const dateInt = req.query.date
     const date = new Date()
     // const email = req.query.email
     const email = req.claims.email
     const searchExp = req.query.search
     const search = new RegExp(searchExp)
-
-    console.log(email)
+    
+    // console.log(email)
     switch(dateInt){
         case 'TODAY':
             
@@ -113,7 +114,7 @@ router.post( '/', ( req, res, next ) => {
     meeting.date = new Date(meeting.date)
 
     if( !meeting ) {
-        const err = new Error( 'Product should be included in request body' );
+        const err = new Error( 'Meeting should be included in request body' );
         err.status = 400;
         return next( err );
     }

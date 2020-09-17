@@ -1,8 +1,10 @@
 const jwt = require('jsonwebtoken')
 
 function authenticate( req, res, next ) {
+
     const token = req.header( 'Authorization' );
-    console.log( token );
+    // console.log("im here")
+    // console.log( token );
     if( !token ) {
         return res.status( 403 ).json({
             message: 'Token is not sent'

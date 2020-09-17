@@ -9,12 +9,27 @@ const User = mongoose.model('User')
 router.post('/login', (req, res, next) => {
     const credentials = req.body
     const email = credentials.email
+    const password = credentials.password
+
+    if(!email){
+        res.status(403).json({
+            message: "Please enter EmailId"
+        })
+    }
+    if(!password){
+        res.status(403).json({
+            message: "Please enter Password"
+        })
+    }
+
+    // console.log(credentials)
     User
         .findOne(credentials)
         .exec((error, result) => {
-            if(error || Object.keys(result).length === 0) {
-                error. status = 403
-                return next(error)
+            if(error || !result || Object.keys(result).length === 0) {
+                return res.status(403).json({
+                    message: "Incorrect Email or Password"
+                })
             }
 
             const claims = {
@@ -25,8 +40,6 @@ router.post('/login', (req, res, next) => {
                 if(error) { 
                     return res.status(401).json({ message: error.message })
                 }
-                // res.header('Authorization',token);
-                // localStorage.setItem('token', token)
                 res.status(200).json({
                     message: 'Signed in sucessfully',
                     token: token,

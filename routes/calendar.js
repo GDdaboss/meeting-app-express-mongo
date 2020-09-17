@@ -10,11 +10,17 @@ const router = express.Router();
 router.get('/', authenticate )
 
 router.get( '/', ( req, res, next ) => {
-    // const date = req.query.date
-    const date = new Date(req.query.date)
-    // const email = req.query.email
-    const email = req.claims.email
+    // console.log("im here2")
 
+    // const date = req.query.date
+    let date = null
+    if(req.query.date === undefined)
+        date = new Date().toISOString()
+    else 
+        date = new Date(req.query.date).toISOString()
+
+    const email = req.claims.email
+    // console.log(email, date)
     Meeting
         .find({
             date: date,
