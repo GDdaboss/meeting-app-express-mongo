@@ -14,10 +14,12 @@ router.get( '/', ( req, res, next ) => {
     const date = new Date()
     // const email = req.query.email
     const email = req.claims.email
+    // let searchExp = ''
+    // if(!req.query.search)
     const searchExp = req.query.search
     const search = new RegExp(searchExp)
     
-    // console.log(email)
+    console.log(email)
     switch(dateInt){
         case 'TODAY':
             
@@ -88,7 +90,8 @@ router.get( '/', ( req, res, next ) => {
         default:
             Meeting
                 .find({
-                    attendees: {$eq: email}
+                    attendees: {$eq: email},
+                    name: {$regex: search}
                 })
                 .exec(( err, results ) => {
                     if( err ) {
